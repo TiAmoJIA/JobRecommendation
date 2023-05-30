@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5333b689-6bce-4702-97bb-7060ec51e304" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="2QUiZUmPNz3vfvs1zQ4fL1jtkMA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="TextClassification" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.lxc.TextClassification" />
+      <module name="Textmodel" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;2029&quot;" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lxc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TextClassification" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5333b689-6bce-4702-97bb-7060ec51e304" name="Default Changelist" comment="" />
+      <created>1685414616669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685414616669</updated>
+      <workItem from="1685414618152" duration="321000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="479" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1685414773657">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state x="479" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685414773657" />
+    <state x="771" y="472" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1685414844946">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state x="771" y="472" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685414844946" />
+    <state width="2005" height="303" key="GridCell.Tab.0.bottom" timestamp="1685414941728">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="303" key="GridCell.Tab.0.bottom/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685414941728" />
+    <state width="2005" height="303" key="GridCell.Tab.0.center" timestamp="1685414941728">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="303" key="GridCell.Tab.0.center/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685414941728" />
+    <state width="2005" height="303" key="GridCell.Tab.0.left" timestamp="1685414941728">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="303" key="GridCell.Tab.0.left/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685414941728" />
+    <state width="2005" height="303" key="GridCell.Tab.0.right" timestamp="1685414941728">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="303" key="GridCell.Tab.0.right/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685414941728" />
+  </component>
+</project>
