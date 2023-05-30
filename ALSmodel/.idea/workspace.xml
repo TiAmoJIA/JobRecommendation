@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5db3f150-0da7-42e8-b1b4-14b6a436ef3d" name="Default Changelist" comment="" />
+    <list default="true" id="5db3f150-0da7-42e8-b1b4-14b6a436ef3d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/ALSmodel.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/lxc/ALSSpark.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/lxc/ALSSpark.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front" beforeDir="false" afterPath="$PROJECT_DIR$/../Front" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Textmodel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Textmodel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Textmodel/src/main/scala/com/lxc/TextClassification.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Textmodel/src/main/scala/com/lxc/TextClassification.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +20,22 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\apache-maven-3.9.1\repo" />
+        <option name="userSettingsFile" value="E:\apache-maven-3.9.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="2QUfyJTyKzGlzrcdDggyqQMNFvL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -21,11 +43,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.58850574" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunManager">
     <configuration name="ALSSpark" type="Application" factoryName="Application" temporary="true">
@@ -58,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685413333403</updated>
       <workItem from="1685413334936" duration="1178000" />
+      <workItem from="1685443972846" duration="173000" />
     </task>
     <servers />
   </component>
@@ -65,10 +91,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="771" y="472" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1685413505399">
+    <state x="771" y="472" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1685443978099">
       <screen x="0" y="0" width="2048" height="1104" />
     </state>
-    <state x="771" y="472" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685413505399" />
+    <state x="771" y="472" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685443978099" />
+    <state x="782" y="243" key="FileChooserDialogImpl" timestamp="1685444024163">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state x="782" y="243" key="FileChooserDialogImpl/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685444024163" />
     <state width="2005" height="771" key="GridCell.Tab.0.bottom" timestamp="1685414522788">
       <screen x="0" y="0" width="2048" height="1104" />
     </state>
@@ -85,9 +115,9 @@
       <screen x="0" y="0" width="2048" height="1104" />
     </state>
     <state width="2005" height="771" key="GridCell.Tab.0.right/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685414522788" />
-    <state x="505" y="130" key="SettingsEditor" timestamp="1685413414455">
+    <state x="505" y="130" key="SettingsEditor" timestamp="1685444027108">
       <screen x="0" y="0" width="2048" height="1104" />
     </state>
-    <state x="505" y="130" key="SettingsEditor/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685413414455" />
+    <state x="505" y="130" key="SettingsEditor/2560.0.1536.816/0.0.2048.1104@0.0.2048.1104" timestamp="1685444027108" />
   </component>
 </project>

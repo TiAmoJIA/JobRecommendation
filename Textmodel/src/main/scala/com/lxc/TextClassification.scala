@@ -18,10 +18,11 @@ object TextClassification {
   def main(args: Array[String]): Unit = {
     Logger.getLogger("org.apache.spark").setLevel(Level.ERROR)
     //  def getTextClassification(inputText: String) {
+    Class.forName("com.mysql.cj.jdbc.Driver")
     val userIdStr = args(0)
     val userId = userIdStr.toInt
 
-//    val inputText = "我是一个常州大学大数据专业的大四学生，我希望能在苏州或南通等地区找一份月薪5-7k的工作，比如Java工程师、数据工程师、宠物美容等工作，我的项目经历是：1.足彩网站数据爬取与分析2. 基于社会网络好友推荐3.基于大数据的淘宝用户行为分析。"
+    //    val inputText = "我是一个常州大学大数据专业的大四学生，我希望能在苏州或南通等地区找一份月薪5-7k的工作，比如Java工程师、数据工程师、宠物美容等工作，我的项目经历是：1.足彩网站数据爬取与分析2. 基于社会网络好友推荐3.基于大数据的淘宝用户行为分析。"
     val conf = new SparkConf()
       .set("spark.some.config.option", "some-value")
       .setMaster("local")
@@ -42,13 +43,14 @@ object TextClassification {
     val connectionProperties = new java.util.Properties()
     connectionProperties.put("user", jdbcUsername)
     connectionProperties.put("password", jdbcPassword)
+    connectionProperties.put("driver", "com.mysql.cj.jdbc.Driver")
     val df: DataFrame = spark.read.jdbc(jdbcUrl, "job", connectionProperties)
     //用户信息
-    val userDf:DataFrame = spark.read.jdbc(jdbcUrl, "user", connectionProperties)
-    val userInfo = userDf.filter($"userId"===userId)
+    val userDf: DataFrame = spark.read.jdbc(jdbcUrl, "user", connectionProperties)
+    val userInfo = userDf.filter($"userId" === userId)
     userInfo.show()
-    val info=userInfo.first()
-    val inputText="我是一名"+info.getAs[String]("school")+"的"+info.getAs[String]("major")+"专业的毕业生，最高学历为"+info.getAs[String]("degree")+"，来自"+info.getAs[String]("hometown")+",我希望能在"+info.getAs[String]("desiredCity")+"找到一份月薪大概"+info.getAs[String]("salary")+"的工作，如："+info.getAs[String]("desiredJob")+",技能是"+info.getAs[String]("skills")+"，兴趣爱好是"+info.getAs[String]("hobby")+",项目经历为："+info.getAs[String]("projectExperience")
+    val info = userInfo.first()
+    val inputText = "我是一名" + info.getAs[String]("school") + "的" + info.getAs[String]("major") + "专业的毕业生，最高学历为" + info.getAs[String]("degree") + "，来自" + info.getAs[String]("hometown") + ",我希望能在" + info.getAs[String]("desiredCity") + "找到一份月薪大概" + info.getAs[String]("salary") + "的工作，如：" + info.getAs[String]("desiredJob") + ",技能是" + info.getAs[String]("skills") + "，兴趣爱好是" + info.getAs[String]("hobby") + ",项目经历为：" + info.getAs[String]("projectExperience")
     print(inputText)
     val updateDf = df.withColumn("jobLabels", regexp_replace(col("jobLabels"), "[\\[\\]']", ""))
       .withColumn("skills", regexp_replace(col("skills"), "[\\[\\]']", ""))
@@ -56,8 +58,8 @@ object TextClassification {
     val sentenceDf = updateDf.select("jobId", "jobName", "salaryDesc", "jobLabels", "skills", "jobExperience", "jobDegree", "cityName", "areaDistrict", "businessDistrict", "brandName", "brandStageName", "brandIndustry", "brandScaleName", "welfareList")
     val sentence = sentenceDf.withColumn("text", concat_ws(",", col("jobName"), col("salaryDesc"), col("jobLabels"), col("skills"), col("jobExperience"), col("jobDegree"), col("cityName"), col("areaDistrict"), col("businessDistrict"), col("brandName"), col("brandStageName"), col("brandIndustry"), col("brandScaleName"), col("welfareList")))
       .select("jobId", "text")
-//    sentence.show(10);
-    val textDF=sentence
+    //    sentence.show(10);
+    val textDF = sentence
     // 定义分词函数
     val tokenize = functions.udf { sentence: String =>
       HanLP.segment(sentence)
@@ -98,8 +100,8 @@ object TextClassification {
     val hashInputDF = lshModel.transform(normalizedInputDF)
 
     val similarTexts = lshModel.approxSimilarityJoin(normalizedDF, hashInputDF, 10, "distance")
-//      .filter(col("datasetA.text") =!= inputText)
-      .select(col("datasetA.jobId"),col("datasetA.text"), col("distance"))
+      //      .filter(col("datasetA.text") =!= inputText)
+      .select(col("datasetA.jobId"), col("datasetA.text"), col("distance"))
       .orderBy(col("distance"))
       .limit(30)
     similarTexts.show(30)
@@ -109,8 +111,8 @@ object TextClassification {
     val connection: Connection = DriverManager.getConnection(jdbcUrl, jdbcUsername, jdbcPassword)
     val query = "UPDATE user SET textRecommendation = ? WHERE userId = ?"
     val statement: PreparedStatement = connection.prepareStatement(query)
-    statement.setString(1,jobIdString)
-    statement.setInt(2,userId)
+    statement.setString(1, jobIdString)
+    statement.setInt(2, userId)
     statement.executeUpdate()
     statement.close()
     connection.close()
