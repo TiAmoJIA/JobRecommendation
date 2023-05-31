@@ -50,4 +50,9 @@ public class UserController {
 
         return true;
     }
+    @GetMapping("/keywords")
+    public String getUserKeywords(@RequestParam Integer userId){
+        return userService.getKey(userId);
+    }
+
 }

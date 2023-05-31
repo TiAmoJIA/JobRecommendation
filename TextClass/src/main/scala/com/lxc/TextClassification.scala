@@ -17,7 +17,7 @@ import org.apache.log4j.{Level, Logger}
 object TextClassification {
   def main(args: Array[String]): Unit = {
     Logger.getLogger("org.apache.spark").setLevel(Level.ERROR)
-    //  def getTextClassification(inputText: String) {
+
     Class.forName("com.mysql.cj.jdbc.Driver")
     val userIdStr = args(0)
     val userId = userIdStr.toInt
@@ -109,13 +109,16 @@ object TextClassification {
     val jobIdString = jobIdsList.mkString("[", ",", "]")
     print(jobIdString)
     val connection: Connection = DriverManager.getConnection(jdbcUrl, jdbcUsername, jdbcPassword)
-    val query = "UPDATE user SET textRecommendation = ? WHERE userId = ?"
-    val statement: PreparedStatement = connection.prepareStatement(query)
+    val queryr = "UPDATE user SET textRecommendation = ? WHERE userId = ?"
+
+    val statement: PreparedStatement = connection.prepareStatement(queryr)
     statement.setString(1, jobIdString)
     statement.setInt(2, userId)
     statement.executeUpdate()
     statement.close()
     connection.close()
+
+
     spark.stop()
 
   }

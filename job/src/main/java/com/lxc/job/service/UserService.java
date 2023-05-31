@@ -14,4 +14,5 @@ public interface UserService {
     Boolean subTextSpark(User user);
     Boolean subALSSpark();
     Boolean addPreference(Integer userId,String securityId);
+    String getKey(Integer userId);
 }
