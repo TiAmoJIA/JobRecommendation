@@ -11,8 +11,6 @@ public interface UserService {
     List<Integer> getId();
     List<Integer> getRecId(Integer userId);
     Integer viseUserInfo(User user);
-    Boolean subTextSpark(User user);
-    Boolean subALSSpark();
     Boolean addPreference(Integer userId,String securityId);
     String getKey(Integer userId);
 }

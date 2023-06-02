@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.lxc.job.entity.KeywordExtractor;
 import com.lxc.job.entity.LoginInfo;
+import com.lxc.job.entity.SparkSubmit;
 import com.lxc.job.entity.User;
 import com.lxc.job.mapper.UserMapper;
 import org.apache.spark.sql.sources.In;
@@ -101,24 +102,14 @@ public class UserServiceImpl implements UserService {
         updateWrapper.set("projectExperience", user.getProjectExperience());
 
         int row = userMapper.update(null, updateWrapper);
+        SparkSubmit sparkSubmit = new SparkSubmit();
+        sparkSubmit.submit(user.getUserId());
         return row;
     }
 
-    ;
 
-    @Override
-    public Boolean subTextSpark(User user) {
-        return null;
-    }
 
-    ;
 
-    @Override
-    public Boolean subALSSpark() {
-        return null;
-    }
-
-    ;
 
     @Override
     public Boolean addPreference(Integer userId, String securityId) {
@@ -190,16 +181,19 @@ public class UserServiceImpl implements UserService {
         keyList.add(desiredJob);
         keyList.add(degree);
         keyList.add(hometown);
-        keyList.addAll(keywordExtractor.getKeywords(skills));
-        keyList.addAll(keywordExtractor.getKeywords(projectExperience));
-        keyList.addAll(keywordExtractor.getKeywords(hobby));
+        if (skills != null)
+            keyList.addAll(keywordExtractor.getKeywords(skills));
+        if (projectExperience != null)
+            keyList.addAll(keywordExtractor.getKeywords(projectExperience));
+        if (hobby != null)
+            keyList.addAll(keywordExtractor.getKeywords(hobby));
         StringJoiner joiner = new StringJoiner(", ", "[", "]");
         for (String s : keyList) {
             joiner.add(s);
         }
 
         String result = joiner.toString();
-        String resultStr = result.substring(1,result.length()-1);
+        String resultStr = result.substring(1, result.length() - 1);
 //        String keywords = u.getKeyWords();
 
 //        keywords = keywords.substring("[WrappedArray(".length(), keywords.length() - 2);
